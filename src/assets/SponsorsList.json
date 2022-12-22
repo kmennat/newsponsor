@@ -1,0 +1,41 @@
+[
+  {
+    "firstName": "Azu Nora",
+    "lastName": "Mobatach",
+    "address": "JLT DMCC Dubai",
+    "personalIdCard": "329023",
+    "telephoneNumber": "39239923",
+    "email": "aln@gmail.com",
+    "nameOfFamilyAssisted": "Jumairah Katey",
+    "nrOfFamilyHelped": 4,
+    "helpType": "Sponsored",
+    "contributionAmount": "80K DHM",
+    "paid": true
+  },
+  {
+    "firstName": "Al Nora",
+    "lastName": "Ayman",
+    "address": "JLT DMCC Dubai",
+    "personalIdCard": "329023",
+    "telephoneNumber": "39239924",
+    "email": "nla@gmail.com",
+    "nameOfFamilyAssisted": "Jumairah Katey",
+    "nrOfFamilyHelped": 4,
+    "helpType": "Sponsored",
+    "contributionAmount": "50K DHM",
+    "paid": true
+  },
+  {
+    "firstName": "Al Nora",
+    "lastName": "Mobatach",
+    "address": "JLT DMCC Dubai",
+    "personalIdCard": "329023",
+    "telephoneNumber": "39239925",
+    "email": "aln@gmail.com",
+    "nameOfFamilyAssisted": "Jumairah Katey",
+    "nrOfFamilyHelped": 4,
+    "helpType": "Sponsored",
+    "contributedAmount": "50K DHM",
+    "paid": true
+  }
+]

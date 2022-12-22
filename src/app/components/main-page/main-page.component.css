@@ -1,0 +1,59 @@
+/* #orphans {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+  }
+  
+  #orphans td, #orphans th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #orphans tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #orphans tr:hover {background-color: #ddd;}
+  
+  #orphans th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(10, 97, 138);
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  #header-text {
+    text-transform: uppercase;
+    text-align: left;
+    text-indent: 20px;
+    font-family: Fantasy;
+  }
+
+  #btn-add{
+    border-radius: 8px;
+    padding: 14px 40px;
+    font-family: Tahoma;
+    background-color: rgb(10, 97, 138);
+  }
+  #btn-add:hover {
+    background-color: rgb(13, 110, 253);
+  }
+
+  .btn{
+    margin:3px;
+  }
+
+  .modal-header{
+    background-color: #0a618a;
+    color: #f2f2f2;
+  }
+
+  .modal-body{
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .modal-title{
+    text-align: center;
+    font-weight: bold;
+  } */

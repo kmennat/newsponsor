@@ -1,0 +1,43 @@
+
+.slick-wrapper{
+  width: 95%;
+  margin: 20px auto;
+}
+
+
+.slick-prev::before {
+  background: grey !important;
+  width: 200px;
+  height: 200px;
+}
+
+.carousel{
+  
+  background: radial-gradient(#367c36, transparent);
+}
+
+.btn-custom{
+  background-color: #d5d542;
+  color: black;
+}
+.cardp{
+  
+  box-shadow: 0px 10px -14px 14px #FFF !important;
+}
+.card-body{
+  background-color: #b5b2b2;
+  color: white;
+}
+
+.containerr{
+  position: relative;
+}
+
+.middle {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  width: 75%;
+  text-align: center;
+  background-color: rgba(229,229,229, 0.37);
+}

@@ -1,0 +1,65 @@
+<nav class="navbar navbar-dark bg-primary navbar-expand-lg">
+  
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      
+      <img id="logo" src="assets/Logo.png" alt="" 
+      height="70px"
+      width="265px">
+    
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">{{ 'nav-bar.nav-item.home' | translate }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"></a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <li class=" px-3" (click)="logout()">
+            <img src="assets/Export.svg" height="40"  alt="">
+        </li>
+        <li>
+          <select class="form-control" (change)="changeSiteLanguage($event)">
+            <option *ngFor="let lang of languageList" [value]="lang.code" [selected]="lang.code ==languageItem">{{lang.label}}</option>
+          </select>
+        </li>
+      </form>
+    </div>
+  </div>
+</nav>
+<!-- <nav class="navbar navbar-expand-xl back fixed-top " id="nav" >
+  <div  class="container-fluid ">
+   
+      <a class="navbar-brand ms-md-3 mb-0" routerLink="/">
+          <img id="logo" src="https://static.wixstatic.com/media/bf92aa_313329fafbf2437ea67a29d9b1de72a3~mv2.png/v1/fill/w_76,h_76,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/6.png 1x, https://static.wixstatic.com/media/bf92aa_313329fafbf2437ea67a29d9b1de72a3~mv2.png/v1/fill/w_152,h_152,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/6.png 2x" alt="" height="60px">
+      </a> -->
+
+      <!-- <img src="/assets/f.svg" alt="" class="pl-4" *ngIf="openV " (click)="open('a')">
+      <img src="/assets/f.svg" alt="" class="pl-4"  *ngIf="!openV" (click)="close()"> -->
+
+    <!-- <div class="right" id="navbarSupportedContent">
+      <ul class=" mb-2 mb-lg-0" >
+        <li class=" px-3">
+          <a class="" >
+          <span class="text-white m-4">{{identity ? identity.name : 'Super Admin'}}</span>
+          </a>
+        </li>
+        <li class=" px-3 ">
+          <img src="/assets/Line.svg" height="40" alt="">
+      </li>
+          <li class=" px-3 ">
+              <img src="/assets/Notification.svg" height="40" alt="">
+          </li>
+          <li class=" px-3" (click)="logout()">
+              <img src="/assets/Export.svg" height="40"  alt="">
+          </li>
+        </ul>
+    </div>
+  </div>
+</nav> -->

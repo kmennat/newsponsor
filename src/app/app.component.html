@@ -1,0 +1,15 @@
+
+
+    <Sponsorship-top-nav *ngIf="notShow"></Sponsorship-top-nav> 
+
+    <div class="row ">
+        <div class="col-md-2" *ngIf="notShow" style="display: none;">
+            <Sponsorship-side-nav></Sponsorship-side-nav>        
+      </div>
+    
+        <div class="col-md-10 m-5">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+    <footer class="p-5">{{ "copyright" | translate : rightInfo }}</footer>

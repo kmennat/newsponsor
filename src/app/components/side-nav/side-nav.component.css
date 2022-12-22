@@ -1,0 +1,37 @@
+.m-home
+{
+    margin-left: 12px;
+    padding: 7px;
+}
+
+#icons, #sidebar
+{
+    transition: 0.5s;
+}
+
+.link-color
+{
+    color: white;
+    text-decoration: none;
+}
+.link2 {
+  text-decoration: none;
+}
+
+.pt-110
+{
+    padding-top: 80px;
+}
+
+.bg-color2 {
+  height: 100vh;
+  background: #222D32;
+}
+
+.setting2 {
+  position: absolute;
+    bottom: 0;
+    border-top: 1px solid white;
+    padding-top: 6px;
+    width: 100%;
+}

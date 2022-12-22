@@ -1,0 +1,185 @@
+<div class="container emp-profile">
+    
+    <div class="main shadow border rounded p-5">
+        <form method="post">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="profile-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+                        <div *ngIf="isEdit" class="file btn btn-lg btn-primary">
+                            Change Photo
+                            <input type="file" name="file"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="profile-head">
+                                <h5>
+                                    {{orphanDetails.familyName}}
+                                </h5>
+                                <h6>
+                                    {{orphanDetails.profession}}
+                                </h6>
+                                <p class="proile-rating">{{ 'modal-form.NumberOfOrphans' | translate }}  : <span>{{orphanDetails.orphansList.length}}</span></p>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">{{ 'modal-form.About' | translate }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">{{ 'modal-form.Orphan' | translate }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#attachments" role="tab" aria-controls="profile" aria-selected="false">{{ 'modal-form.Attachments' | translate }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <button routerLink="/admin-page" class="btn btn-primary float-right">{{ 'modal-form.GoBack' | translate }}</button>
+                    <!-- <input (click)="toggleEdit()" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="profile-work">
+                        <p>Adress</p>
+                        <a href="">{{orphanDetails.address}}</a><br/>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="tab-content profile-tab" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>{{ 'modal-form.PersonalIDCard' | translate }} </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>{{orphanDetails.personalId}}</p> 
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>{{ 'modal-form.MotherlastName' | translate }}</label>
+                                        </div>
+                                        <div class="col-md-6">                                            
+                                            <p>{{orphanDetails.familyName}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>{{ 'modal-form.MotherFirstName' | translate }}</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>{{orphanDetails.motherName}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>{{ 'modal-form.Phone' | translate }}</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>{{orphanDetails.telephoneNumber}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>{{ 'modal-form.profession' | translate }}</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>{{orphanDetails.profession}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>{{ 'modal-form.MaternalHealthStatus' | translate }}</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>{{orphanDetails.maternalHealthStatus}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>{{ 'modal-form.SpDeathDate' | translate }}</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>{{orphanDetails.spouseDeathDate | date}}</p>
+                                        </div>
+                                    </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="orphans-list" *ngFor="let orphan of orphanDetails.orphansList; let i = index">
+                                <hr>
+                                <h5>{{'modal-form.Orphan' | translate }} {{i+1}}</h5>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>{{ 'modal-form.OrphanName' | translate }}</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{orphan.name}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>{{ 'modal-form.OrphanFirstName' | translate }}</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{orphanDetails.profession}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>{{ 'modal-form.Orphanbirthday' | translate }}</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>230</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>{{ 'modal-form.HealthStatus' | translate }}</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Expert</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>{{ 'modal-form.ResidentialStatus' | translate }} </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>6 months</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>{{ 'modal-form.OrphanAcademicLevel' | translate }}</label>                          
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Expert</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>{{ 'modal-form.GodFatherType' | translate }}</label>                       
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Expert</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        
+                        <div class="tab-pane fade" id="attachments" role="tabpanel" aria-labelledby="attachments-tab">
+                            <h5> <a href="">orignal cerificate.docx</a> </h5>
+                            <h5> <a href="">academic result.pdf</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button *ngIf="isEdit" class="btn btn-primary float-right">Save</button>
+        </form>  
+
+    </div>         
+</div>

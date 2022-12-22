@@ -1,0 +1,116 @@
+<div class="container emp-profile">
+    
+  <div class="main shadow border rounded p-5">
+      <form method="post">
+          <div class="row">
+              <div class="col-md-4">
+                  <div class="profile-img">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+                      
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="profile-head">
+                              <h5>
+                                  {{sponsorDetails.firstName}}
+                              </h5>
+                              <h6>
+                                  {{sponsorDetails.contributedAmount}}
+                              </h6>
+                              <p class="proile-rating">Email : <span>{{sponsorDetails.email}}</span></p>
+                      <ul class="nav nav-tabs" id="myTab" role="tablist">
+                          <li class="nav-item">
+                              <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" id="attachments-tab" data-bs-toggle="tab" href="#attachments" role="tab" aria-controls="attachments" aria-selected="false">Sponsored</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-md-2">
+                  
+                  <button routerLink="/admin-page" class="btn btn-primary float-right">Go Back</button>
+                  <!-- <input (click)="toggleEdit()" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/> -->
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-4">
+                  <div class="profile-work">
+                      <p>ADDRESS</p>
+                      <a href="">{{sponsorDetails.address}}</a><br/>
+                  </div>
+              </div>
+              <div class="col-md-8">
+                  <div class="tab-content profile-tab" id="myTabContent">
+                      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                  <div class="row">
+                                      <div class="col-md-6">
+                                          <label>Personal Id Card</label>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <p>{{sponsorDetails.personalIdCard}}</p> 
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-md-6">
+                                          <label>Name</label>
+                                      </div>
+                                      <div class="col-md-6">                                            
+                                          <p>{{sponsorDetails.firstName +' '+ sponsorDetails.lastName}}</p>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-md-6">
+                                          <label>Name Of Family Assisted</label>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <p>{{sponsorDetails.nameOfFamilyAssisted}}</p>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-md-6">
+                                          <label>Phone</label>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <p>{{sponsorDetails.telephoneNumber}}</p>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-md-6">
+                                          <label>Nr Of Family Helped</label>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <p>{{sponsorDetails.NrOfFamilyHelped}}</p>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-md-6">
+                                          <label>Contributed Amount</label>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <p>{{sponsorDetails.contributedAmount}}</p>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-md-6">
+                                          <label>Help Type</label>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <p>{{sponsorDetails.helpType }}</p>
+                                      </div>
+                                  </div>
+                      </div>
+
+                      
+                      <div class="tab-pane fade" id="attachments" role="tabpanel" aria-labelledby="attachments-tab">
+                          <h5> <a href="">Family No One</a> </h5>
+                          <h5> <a href="">Family No two</a></h5>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </form>  
+
+  </div>         
+</div>
