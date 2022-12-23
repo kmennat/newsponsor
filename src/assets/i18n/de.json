@@ -1,9 +1,9 @@
 {
   "nav-bar": {
     "nav-item": {
-      "home": "Heimat",
-      "sponsor":"Heimat",
-      "orphans":"Waisen"
+      "home": "Home",
+      "sponsor":"Sponsors",
+      "orphans":"Waisenkinder"
     },
     "search": {
       "name": "Suche",
