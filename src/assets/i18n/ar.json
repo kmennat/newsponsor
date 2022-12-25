@@ -54,6 +54,7 @@
         "Address":"العنوان",
         "MaternalHealthStatus":"حالة الأم الصحية",
         "AcademicLevel":"مستوى التعليم",
+        "Sponsored":"العائلات المكفولة",
         
         "PleaseEnterValidMotherFirstName": "الرجاء إدخال اسم الأم الأول صالح",
         "PleaseentervalidMotherLastName":"الرجاء إدخال اسم  الأم",
@@ -120,7 +121,7 @@
         "Phone":"رقم الهاتف",
         "Mail":"البريد الالكتروني",
         "NameofFamilyAssisted":"اسم الاسرة المكلف بها",
-        "NrofFamilyHelped":"رقم الاسرة المكلف بها",
+        "NrofFamilyHelped":"عدد الاسر المكلف بها",
         "HelpType":"نوع المساعدة",
         "ContributionAmount":"مبلغ المساهمة",
         "UpdateSponsor":"تحديث  الكفيل",

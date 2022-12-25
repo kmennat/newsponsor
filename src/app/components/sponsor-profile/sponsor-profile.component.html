@@ -20,24 +20,24 @@
                               <p class="proile-rating">Email : <span>{{sponsorDetails.email}}</span></p>
                       <ul class="nav nav-tabs" id="myTab" role="tablist">
                           <li class="nav-item">
-                              <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                              <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">{{ 'modal-form.About' | translate }}</a>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link" id="attachments-tab" data-bs-toggle="tab" href="#attachments" role="tab" aria-controls="attachments" aria-selected="false">Sponsored</a>
+                              <a class="nav-link" id="attachments-tab" data-bs-toggle="tab" href="#attachments" role="tab" aria-controls="attachments" aria-selected="false">{{ 'modal-form.Sponsored' | translate }}</a>
                           </li>
                       </ul>
                   </div>
               </div>
               <div class="col-md-2">
                   
-                  <button routerLink="/admin-page" class="btn btn-primary float-right">Go Back</button>
+                  <button routerLink="/admin-page" class="btn btn-primary float-right">{{ 'modal-form.GoBack' | translate }}</button>
                   <!-- <input (click)="toggleEdit()" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/> -->
               </div>
           </div>
           <div class="row">
               <div class="col-md-4">
                   <div class="profile-work">
-                      <p>ADDRESS</p>
+                      <p>{{'modal-form.Address' | translate }}</p>
                       <a href="">{{sponsorDetails.address}}</a><br/>
                   </div>
               </div>
@@ -46,7 +46,7 @@
                       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                   <div class="row">
                                       <div class="col-md-6">
-                                          <label>Personal Id Card</label>
+                                          <label>{{'modal-form.PersonalIDCard' | translate }}</label>
                                       </div>
                                       <div class="col-md-6">
                                           <p>{{sponsorDetails.personalIdCard}}</p> 
@@ -54,7 +54,7 @@
                                   </div>
                                   <div class="row">
                                       <div class="col-md-6">
-                                          <label>Name</label>
+                                          <label>{{'modal-form.Spfullname' | translate }}</label>
                                       </div>
                                       <div class="col-md-6">                                            
                                           <p>{{sponsorDetails.firstName +' '+ sponsorDetails.lastName}}</p>
@@ -62,7 +62,7 @@
                                   </div>
                                   <div class="row">
                                       <div class="col-md-6">
-                                          <label>Name Of Family Assisted</label>
+                                          <label>{{'modal-form.NameofFamilyAssisted' | translate }}</label>
                                       </div>
                                       <div class="col-md-6">
                                           <p>{{sponsorDetails.nameOfFamilyAssisted}}</p>
@@ -70,7 +70,7 @@
                                   </div>
                                   <div class="row">
                                       <div class="col-md-6">
-                                          <label>Phone</label>
+                                          <label>{{'modal-form.Phone' | translate }}</label>
                                       </div>
                                       <div class="col-md-6">
                                           <p>{{sponsorDetails.telephoneNumber}}</p>
@@ -78,7 +78,7 @@
                                   </div>
                                   <div class="row">
                                       <div class="col-md-6">
-                                          <label>Nr Of Family Helped</label>
+                                          <label>{{'modal-form.NrofFamilyHelped' | translate }}</label>
                                       </div>
                                       <div class="col-md-6">
                                           <p>{{sponsorDetails.NrOfFamilyHelped}}</p>
@@ -86,7 +86,7 @@
                                   </div>
                                   <div class="row">
                                       <div class="col-md-6">
-                                          <label>Contributed Amount</label>
+                                          <label>{{'modal-form.ContributionAmount' | translate }}</label>
                                       </div>
                                       <div class="col-md-6">
                                           <p>{{sponsorDetails.contributedAmount}}</p>
@@ -94,7 +94,7 @@
                                   </div>
                                   <div class="row">
                                       <div class="col-md-6">
-                                          <label>Help Type</label>
+                                          <label>{{'modal-form.HelpType' | translate }}</label>
                                       </div>
                                       <div class="col-md-6">
                                           <p>{{sponsorDetails.helpType }}</p>

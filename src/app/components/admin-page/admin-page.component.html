@@ -101,7 +101,7 @@
 
 
 
-<!-- Delete Orphan Modal -->
+<!-- Delete Orphan Modal ALERT WINDOW-->
 <div class="modal fade" id="deleteOrphanModal" data-bs-backdrop="static"  tabindex="-1" aria-labelledby="deleteUserModalLabel" aria-hidden="true">
 <div class="modal-dialog">
 <div class="modal-content">
@@ -312,9 +312,9 @@
 <ng-container *ngFor="let orphanDataForm of orphansList.controls; let i = index"  [formGroupName]="i">
    <div class="lesson-form-row mt-2"> <!--[formGroup]="orphansList"> -->
 
-  <h5>{{ 'modal-form.Orphan' | translate }} {{i+1}} Data 
+  <h5>{{ 'modal-form.Orphan' | translate }} {{i+1}}
     <button class="btn btn-danger btn-xs" (click)="deleteOrphan(i)">
-      Delete Orphan</button></h5>
+      {{ 'modal-form.deleteOrphan' | translate }}</button></h5>
 
   <div class="row mt-3">
     <div class="col-md-5">
@@ -451,7 +451,7 @@
 </ng-container>
 
 <button class="btn btn-primary mt-2" (click)="addOrphan()">
-{{ 'modal-form.AddOrphan'  | translate }}
+{{ 'modal-form.AddOrphan'| translate }}
 </button>
 
 

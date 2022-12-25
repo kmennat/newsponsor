@@ -118,10 +118,11 @@
       "Phone":"Tel.Nr",
       "Mail":"e-Mail",
       "NameofFamilyAssisted":"Name der betreuten Familie",
-      "NrofFamilyHelped":"Nr der geholfenen Familie",
+      "NrofFamilyHelped":"Anzahl der geholfenen Familie",
       "HelpType":"Hilfetyp",
       "ContributionAmount":"Beitragshöhe",
       "UpdateSponsor":"Sponsor aktualisieren",
+      "Sponsored":"Gesponserte Familien",
 
       "Data":"Daten",
       "Nr":"Nr",
