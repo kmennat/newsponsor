@@ -595,6 +595,11 @@
         getSponsorFormProperty('nameOfFamilyAssisted')?.dirty)
       ">
     </div>
+    <div class="col-md-5">
+      <label>{{ 'modal-form.helpstartdate' | translate }}</label>
+      <input type="text" class="form-control">
+      
+    </div>
     
   </div>
   <div class="row mt-3">
@@ -631,7 +636,7 @@
       ">
     </div>
     <div class="col-md-5">
-      <label>{{ 'modal-form.PaidYes/No'  | translate }}</label>
+      <label>{{ 'modal-form.PaidYesOrNo'  | translate }}</label>
       <input type="text" class="form-control"
       formControlName="paid"
       [class.is-invalid]="
