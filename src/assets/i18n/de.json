@@ -41,7 +41,7 @@
       "AddNewOrphan":"Neues Waisenkind hinzufügen",
       "UpdateOrphan":"Waisenkind aktualisieren",
       "fillallfields":"Bitte fülle alle Felder aus",
-      "UploadMotherImage":"Mutterbild hochladen",
+      "UploadfamilyImage":"Familie Bild hochladen",
       "SelectedImage":"Ausgewähltes Bild",
       "FamilyName":"Familien Name",
       "enterValidFamilyName":"Bitte geben Sie eine gültige Familie Name ein",
@@ -123,6 +123,7 @@
       "ContributionAmount":"Beitragshöhe",
       "UpdateSponsor":"Sponsor aktualisieren",
       "Sponsored":"Gesponserte Familien",
+      "helpstartdate":"Startdatum der Hilfe",
 
       "Data":"Daten",
       "Nr":"Nr",
@@ -130,7 +131,8 @@
       "SaveDetails":"Speichern",
       "Details":"Details",
       "Delete":"Löschen",
-      "About":"Über Mutter",
+      "AboutMother":"Über Mutter",
+      "AboutSponsor":"Über Sponsor",
       "Attachments":"Anhänge",
       "GoBack":"Zurück"
      

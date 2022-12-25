@@ -9,6 +9,7 @@
     "nameOfFamilyAssisted": "Jumairah Katey",
     "nrOfFamilyHelped": 4,
     "helpType": "Sponsored",
+    "helpstartdate" : "09.12.2015",
     "contributionAmount": "80K DHM",
     "paid": true
   },
@@ -22,6 +23,7 @@
     "nameOfFamilyAssisted": "Jumairah Katey",
     "nrOfFamilyHelped": 4,
     "helpType": "Sponsored",
+    "helpstartdate" : "20.10.2018",
     "contributionAmount": "50K DHM",
     "paid": true
   },
@@ -35,6 +37,7 @@
     "nameOfFamilyAssisted": "Jumairah Katey",
     "nrOfFamilyHelped": 4,
     "helpType": "Sponsored",
+    "helpstartdate" : "20.12.2021",
     "contributedAmount": "50K DHM",
     "paid": true
   }

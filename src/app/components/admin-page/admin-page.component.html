@@ -62,10 +62,11 @@
       <thead style="color: black;">
         <th>S.No</th>
         <th style="min-width: 114px;">{{ 'modal-form.Spfullname' | translate }}</th>
-        <th style="min-width: 114px;">{{ 'modal-form.PersonalIDCard' | translate }}</th>
+        <!--<th style="min-width: 114px;">{{ 'modal-form.PersonalIDCard' | translate }}</th>-->
         <th style="min-width: 125px;">{{ 'modal-form.Address' | translate }}</th>
         <th style="min-width: 125px;">{{ 'modal-form.Phone' | translate }}</th>
         <th style="min-width: 125px;">{{ 'modal-form.Mail' | translate }}</th>
+        <th style="min-width: 114px;">{{ 'modal-form.helpstartdate' | translate }}</th>
         
       </thead>
 
@@ -73,10 +74,10 @@
         <tr *ngFor="let user of sponsorList | filter: filterTermSponsor; let i = index">
           <td>{{i+1}}</td>
           <td>{{user.firstName}}</td>
+          <td>{{user.address}}</td>
           <td>{{user.telephoneNumber}}</td>
           <td>{{user.email}}</td>
-          <td>{{user.nameOfFamilyAssisted}}</td>
-          <td>{{!user.lastUpdated ? 'May 12, 2022' : user.lastUpdated | date}}</td>
+          <td>{{user.helpstartdate}}</td>
           <td> <span>
             <button class="btn btn-primary btn-xs" routerLink="/sponsor-profile">{{ 'modal-form.Details' | translate }}</button>
             <img class="m-1" width="20px" height="20px" (click)="openUpdateSponsorMoal(user)" data-bs-toggle="modal" data-bs-target="#addSponsorModal" src="assets/edit-icon.png">
@@ -160,7 +161,7 @@
   
   <div class="row">
     <div class="col-md-5">
-      <label>{{ 'modal-form.UploadMotherImage' | translate }}</label>
+      <label>{{ 'modal-form.UploadfamilyImage' | translate }}</label>
       <input class="form-control" type="file" (change)="onSelectImage($event)"> <br>
       <div class="attachments" *ngIf="motherImage">
         <strong>:{{ 'modal-form.SelectedImage' | translate }}</strong>
@@ -197,7 +198,7 @@
           getFormProperty('familyName')?.dirty)
       ">
       <div class="invalid-feedback">{{ 'modal-form.Pleaseentervalidfamilyname' | translate }}</div>
-    </div>
+    </div><br>
     <div class="col-md-5 offset-md-1">
       <label>{{ 'modal-form.MotherFirstName' | translate }}</label>
       <input type="text" class="form-control"
@@ -209,7 +210,7 @@
       ">
       <div class="invalid-feedback">{{ 'modal-form.PleaseEnterValidMotherFirstName' | translate }}</div>
     </div>
-  </div><br><br>
+  </div><br>
   <div class="row">
     <div class="col-md-5">
       <label>{{ 'modal-form.MotherlastName' | translate }}</label>
@@ -221,21 +222,8 @@
           getFormProperty('motherName')?.dirty)
       ">
       <div class="invalid-feedback">{{ 'modal-form.PleaseentervalidMotherLastName' | translate }}</div>
-    </div>
+    </div><br>
     <div class="col-md-5 offset-md-1">
-      <label>{{ 'modal-form.MaternalHealthStatus' | translate }}</label>
-      <input type="text" class="form-control"
-      formControlName="maternalHealthStatus"
-      [class.is-invalid]="
-        getFormProperty('maternalHealthStatus')?.invalid &&
-        (getFormProperty('maternalHealthStatus')?.touched ||
-          getFormProperty('maternalHealthStatus')?.dirty)
-      ">
-      <div class="invalid-feedback">{{ 'modal-form.PleaseentervalidMaternalHealthStatus' | translate }}</div>
-    </div>
-  </div><br>
-  <div class="row">
-    <div class="col-md-5">
       <label>{{ 'modal-form.PersonalIDCard' | translate }} </label>
       <input type="text" class="form-control" 
       formControlName="personalIdCard"
@@ -246,6 +234,20 @@
       ">
       <div class="invalid-feedback">{{ 'modal-form.PleaseentervalidPersonalIDCard' | translate }}</div>
     </div>
+    
+  </div><br>
+  <div class="row">
+    <div class="col-md-5">
+      <label>{{ 'modal-form.MaternalHealthStatus' | translate }}</label>
+      <input type="text" class="form-control"
+      formControlName="maternalHealthStatus"
+      [class.is-invalid]="
+        getFormProperty('maternalHealthStatus')?.invalid &&
+        (getFormProperty('maternalHealthStatus')?.touched ||
+          getFormProperty('maternalHealthStatus')?.dirty)
+      ">
+      <div class="invalid-feedback">{{ 'modal-form.PleaseentervalidMaternalHealthStatus' | translate }}</div>
+    </div><br>
     <div class="col-md-5 offset-md-1">
       <label>{{ 'modal-form.Phone' | translate }}</label>
       <input type="text" class="form-control"
@@ -258,7 +260,7 @@
       <div class="invalid-feedback">{{ 'modal-form.PleaseentervalidTelephoneNumber' | translate }}</div>
     </div>
   </div><br>
-  <div class="row mt-3">
+  <div class="row">
     <div class="col-md-5">
       <label>{{ 'modal-form.profession' | translate }} </label>
       <input type="text" class="form-control"
@@ -269,31 +271,7 @@
           getFormProperty('profession')?.dirty)
       ">
       <div class="invalid-feedback">{{ 'modal-form.PleaseEnterValidProfession' | translate }}</div>
-    </div>
-    <div class="col-md-5 offset-md-1">
-      <label> {{ 'modal-form.NumberOfOrphans' | translate }}</label>
-      <input type="number" class="form-control"
-      formControlName="numberOfOrphans"
-      [class.is-invalid]="
-        getFormProperty('numberOfOrphans')?.invalid &&
-        (getFormProperty('numberOfOrphans')?.touched ||
-          getFormProperty('numberOfOrphans')?.dirty)
-      ">
-      <div class="invalid-feedback">{{ 'modal-form.PleaseEnterNumberOfOrphans' | translate }}</div>
-    </div>
-  </div>
-  <div class="row mt-3">
-    <div class="col-md-5">
-      <label>{{ 'modal-form.SpDeathDate' | translate }}</label>
-      <input type="datetime-local" class="form-control"
-      formControlName="spouseDeathDate"
-      [class.is-invalid]="
-        getFormProperty('spouseDeathDate')?.invalid &&
-        (getFormProperty('spouseDeathDate')?.touched ||
-          getFormProperty('spouseDeathDate')?.dirty)
-      ">
-      <div class="invalid-feedback">{{ 'modal-form.PleaseEnterSpDeathDate' | translate }}</div>
-    </div>
+    </div><br>
     <div class="col-md-5 offset-md-1">
       <label>{{ 'modal-form.Address' | translate }}</label>
       <input type="text" class="form-control"
@@ -305,7 +283,56 @@
       ">
       <div class="invalid-feedback">{{ 'modal-form.PleaseEnterAddress' | translate }}</div>
     </div>
-  </div>
+  </div><br>
+  <div class="row">
+    <div class="col-md-5">
+      <label> {{ 'modal-form.NumberOfOrphans' | translate }}</label>
+      <input type="number" class="form-control"
+      formControlName="numberOfOrphans">  
+    </div><br>
+    <div class="col-md-5 offset-md-1">
+      <label> {{ 'modal-form.NumberOfPeople' | translate }}</label>
+      <input type="number" class="form-control"
+      formControlName="numberOfOrphans">
+    </div>
+  </div><br>
+  <div class="row">
+    <div class="col-md-5">
+      <label>{{ 'modal-form.GodFatherType' | translate }}</label>
+      <input type="text" class="form-control"
+      formControlName="godFatherType">
+    </div><br>
+    <div class="col-md-5 offset-md-1">
+      <label>{{ 'modal-form.povertyIndex' | translate }}</label>
+      <input type="text" class="form-control"
+      formControlName="earnings">
+    </div>
+  </div><br>
+ 
+  <div class="row">
+    <div class="col-md-5">
+      <label>{{ 'modal-form.SpDeathDate' | translate }}</label>
+      <input type="datetime-local" class="form-control"
+      formControlName="spouseDeathDate"
+      [class.is-invalid]="
+        getFormProperty('spouseDeathDate')?.invalid &&
+        (getFormProperty('spouseDeathDate')?.touched ||
+          getFormProperty('spouseDeathDate')?.dirty)
+      ">
+      <div class="invalid-feedback">{{ 'modal-form.PleaseEnterSpDeathDate' | translate }}</div>
+    </div><br><br>
+    <div class="col-md-5 offset-md-1">
+      <label>{{ 'modal-form.ResidentialStatus' | translate }} </label>
+      <input type="text" class="form-control"
+      formControlName="residentialStatus">
+    </div><br><br>
+    <div class="row"></div>
+      <div class="col-md-5">
+        <label>{{ 'modal-form.Notes' | translate }}</label>
+        <textarea class="form-control"></textarea>
+      </div>
+    </div>
+    
 
   
 <ng-container formArrayName="orphansList">
@@ -366,7 +393,7 @@
     </div>
   </div>
 
-  <div class="row mt-3">
+  <!--<div class="row mt-3">
     <div class="col-md-5">
       <label>{{ 'modal-form.ResidentialStatus' | translate }} </label>
       <input type="text" class="form-control"
@@ -389,7 +416,7 @@
       ">
       <div class="invalid-feedback">{{ 'modal-form.PleaseenterNumberOfPeople' | translate }}</div>
     </div>
-  </div>
+  </div>-->
 
   <div class="row mt-3">
     <div class="col-md-5">
@@ -404,19 +431,6 @@
       <div class="invalid-feedback">{{ 'modal-form.PleaseenterSocialCare' | translate }} </div>
     </div>
     <div class="col-md-5 offset-md-1">
-      <label>{{ 'modal-form.povertyIndex' | translate }}</label>
-      <input type="text" class="form-control"
-      formControlName="earnings"
-      [class.is-invalid]="
-      getFormArrayProperty(i,'earnings')?.invalid &&
-        (getFormArrayProperty(i,'earnings')?.touched ||
-        getFormArrayProperty(i,'earnings')?.dirty)
-      ">
-      <div class="invalid-feedback">{{ 'modal-form.Pleaseenterearnings' | translate }}</div>
-    </div>
-  </div>
-  <div class="row mt-3">
-    <div class="col-md-5">
       <label>{{ 'modal-form.AcademicLevel' | translate }}</label>
       <input type="text" class="form-control"
       formControlName="academicLevel"
@@ -427,11 +441,21 @@
       ">
       <div class="invalid-feedback">{{ 'modal-form.Pleaseenteracademiclevel' | translate }}</div>
     </div>
-    <div class="col-md-5 offset-md-1">
+  </div>
+  <div class="row mt-3">
+    <div class="col-md-5">
+      <label>{{ 'modal-form.helpstartdate' | translate }}</label>
+      <input type="text" class="form-control">
+      
+    </div>
+    <!--<div class="col-md-5 offset-md-1">
       <label>{{ 'modal-form.Notes' | translate }}</label>
       <textarea class="form-control"></textarea>
     </div>
   </div>
+  </div>
+
+
   <div class="row mt-3">
     <div class="col-md-5">
       <label>{{ 'modal-form.GodFatherType' | translate }}</label>
@@ -444,9 +468,13 @@
       ">
       <div class="invalid-feedback">{{ 'modal-form.PleaseenterGodFatherType' | translate }}</div>
     </div>
-    </div>
+    </div>-->
 
   </div>
+</div>
+
+
+
 </ng-container>
 </ng-container>
 

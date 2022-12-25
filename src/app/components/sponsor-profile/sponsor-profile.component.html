@@ -20,7 +20,7 @@
                               <p class="proile-rating">Email : <span>{{sponsorDetails.email}}</span></p>
                       <ul class="nav nav-tabs" id="myTab" role="tablist">
                           <li class="nav-item">
-                              <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">{{ 'modal-form.About' | translate }}</a>
+                              <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">{{ 'modal-form.AboutSponsor' | translate }}</a>
                           </li>
                           <li class="nav-item">
                               <a class="nav-link" id="attachments-tab" data-bs-toggle="tab" href="#attachments" role="tab" aria-controls="attachments" aria-selected="false">{{'modal-form.Sponsored' | translate }}</a>
@@ -44,14 +44,14 @@
               <div class="col-md-8">
                   <div class="tab-content profile-tab" id="myTabContent">
                       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                  <div class="row">
+                                  <!--<div class="row">
                                       <div class="col-md-6">
                                           <label>{{'modal-form.PersonalIDCard' | translate }}</label>
                                       </div>
                                       <div class="col-md-6">
                                           <p>{{sponsorDetails.personalIdCard}}</p> 
                                       </div>
-                                  </div>
+                                  </div>-->
                                   <div class="row">
                                       <div class="col-md-6">
                                           <label>{{'modal-form.Spfullname' | translate }}</label>
@@ -94,10 +94,10 @@
                                   </div>
                                   <div class="row">
                                       <div class="col-md-6">
-                                          <label>{{'modal-form.HelpType' | translate }}</label>
+                                          <label>{{ 'modal-form.helpstartdate' | translate }}</label>
                                       </div>
                                       <div class="col-md-6">
-                                          <p>{{sponsorDetails.helpType }}</p>
+                                          <p>{{sponsorDetails.helpstartdate }}</p>
                                       </div>
                                   </div>
                       </div>

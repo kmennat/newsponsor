@@ -42,7 +42,7 @@
         "AddNewOrphan":"اضافة يتيم جديد",
         "UpdateOrphan":" تحديث اليتيم",
         "fillallfields":"الرجاء ملء جميع الحقول",
-        "UploadMotherImage":" تحميل صورة الأم",
+        "UploadfamilyImage":" تحميل صورة الاسرة  ",
         "SelectedImage":"الصورة المحددة",
         "FamilyName":"اسم العائلة",
         "enterValidFamilyName":"الرجاء إدخال اسم عائلي",
@@ -55,6 +55,7 @@
         "MaternalHealthStatus":"حالة الأم الصحية",
         "AcademicLevel":"مستوى التعليم",
         "Sponsored":"الاسر المكلف بها",
+        "helpstartdate":"تاريخ بداية الكفالة",
         
         "PleaseEnterValidMotherFirstName": "الرجاء إدخال اسم الأم الأول صالح",
         "PleaseentervalidMotherLastName":"الرجاء إدخال اسم  الأم",
@@ -133,7 +134,8 @@
         "SaveDetails":"يحفظ",
         "Details":"التفاصيل",
         "Delete":"حذف",
-        "About":"حول الام",
+        "AboutMother":"معلومات حول الام" ,
+        "AboutSponsor":"معلومات حول  الكفيل",
         "Attachments":"المرفقات",
         "GoBack":"رجوع"
        

@@ -41,7 +41,7 @@
       "AddNewOrphan":"Add New Orphan",
       "UpdateOrphan":"Update Orphan",
       "fillallfields":"Please fill out all fields",
-      "UploadMotherImage":"Upload Mother Image",
+      "UploadfamilyImage":"Upload family Image",
       "SelectedImage":"Selected Image",
       "FamilyName":"Family Name",
       "enterValidFamilyName":"Please enter a valid family",
@@ -127,6 +127,7 @@
       "AddNewSponsor":"Add New Sponsor",
       "Sponsored":"Sponsored",
       "ChangePhoto":"Change Photo",
+      "helpstartdate":"Help Start Date",
 
       "Data":"Data",
       "Nr":"Nr",
@@ -134,7 +135,8 @@
       "SaveDetails":"Save",
       "Details":"Details",
       "Delete":"Delete",
-      "About":"About Mother",
+      "AboutMother":"About Mother",
+      "AboutSponsor":"About Sponsor",
       "Attachments":"Attachments",
       "GoBack":"Go Back"
      

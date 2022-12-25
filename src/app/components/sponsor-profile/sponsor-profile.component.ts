@@ -18,6 +18,7 @@ export class SponsorProfileComponent implements OnInit {
     nameOfFamilyAssisted: 'Jumairah Katey',
     NrOfFamilyHelped: 4,
     helpType: 'Sponsored',
+    helpstartdate : '20.12.2021',
     contributedAmount: "50K DHM",
     paid: true
   }
