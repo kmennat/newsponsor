@@ -135,8 +135,9 @@
       "AboutSponsor":"Über Sponsor",
       "Attachments":"Anhänge",
       "GoBack":"Zurück",
-      "PaidYesOrNo":"Bezahlt? Ja Oder Nein"
-     
+      "PaidYesOrNo":"Bezahlt? Ja Oder Nein",
+      "TheAmountPaid":"Der gezahlte Betrag",
+      "TheAmountSpent":"der ausgegebene Betrag"
     },
 
     "login-page": {

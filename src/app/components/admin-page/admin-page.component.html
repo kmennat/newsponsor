@@ -298,19 +298,6 @@
   </div><br>
   <div class="row">
     <div class="col-md-5">
-      <label>{{ 'modal-form.GodFatherType' | translate }}</label>
-      <input type="text" class="form-control"
-      formControlName="godFatherType">
-    </div><br>
-    <div class="col-md-5 offset-md-1">
-      <label>{{ 'modal-form.povertyIndex' | translate }}</label>
-      <input type="text" class="form-control"
-      formControlName="earnings">
-    </div>
-  </div><br>
- 
-  <div class="row">
-    <div class="col-md-5">
       <label>{{ 'modal-form.SpDeathDate' | translate }}</label>
       <input type="datetime-local" class="form-control"
       formControlName="spouseDeathDate"
@@ -322,15 +309,42 @@
       <div class="invalid-feedback">{{ 'modal-form.PleaseEnterSpDeathDate' | translate }}</div>
     </div><br><br>
     <div class="col-md-5 offset-md-1">
+      <label>{{ 'modal-form.povertyIndex' | translate }}</label>
+      <input type="text" class="form-control"
+      formControlName="earnings">
+    </div>
+  </div><br>
+ 
+  <div class="row">
+    <div class="col-md-5">  
       <label>{{ 'modal-form.ResidentialStatus' | translate }} </label>
       <input type="text" class="form-control"
       formControlName="residentialStatus">
     </div><br><br>
+    <div class="col-md-5 offset-md-1">
+      <label>{{ 'modal-form.Notes' | translate }}</label>
+      <textarea class="form-control"></textarea>
+    </div><br>
 
     <div class="row"></div>
-      <div class="col-md-5">
-        <label>{{ 'modal-form.Notes' | translate }}</label>
-        <textarea class="form-control"></textarea>
+      <div class="col-md-5"> 
+       <label>{{ 'modal-form.GodFatherType' | translate }}</label>
+       <input type="text" class="form-control"
+       formControlName="godFatherType">      
+      </div>
+    </div><br>
+
+
+    <div class="row">
+      <div class="col-md-5"> 
+        <label>{{ 'modal-form.TheAmountPaid' | translate }}</label>
+        <input type="text" class="form-control"
+        formControlName="TheAmountPaid">     
+      </div><br><br>
+      <div class="col-md-5 offset-md-1">
+        <label>{{ 'modal-form.TheAmountSpent' | translate }}</label>
+        <input type="text" class="form-control"
+        formControlName="TheAmountSpent">   
       </div>
     </div>
 

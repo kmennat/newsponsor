@@ -138,8 +138,9 @@
         "AboutSponsor":"معلومات حول  الكفيل",
         "Attachments":"المرفقات",
         "GoBack":"رجوع",
-        "PaidYesOrNo":"تم دفع الكفالة ؟ نعم ام لا"
-       
+        "PaidYesOrNo":"تم دفع الكفالة ؟ نعم ام لا",
+        "TheAmountPaid":"مبلغ الكفالة المدفوع",
+        "TheAmountSpent":"المبلغ المنفق"
       },
   
 
