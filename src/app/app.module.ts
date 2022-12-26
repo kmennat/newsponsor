@@ -21,6 +21,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { SponsorProfileComponent } from './components/sponsor-profile/sponsor-profile.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { MainPageComponent } from './components/main-page/main-page.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http,
@@ -37,7 +38,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     MainPageComponent,
     TopNavComponent,
     SideNavComponent,
-    SponsorProfileComponent
+    SponsorProfileComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

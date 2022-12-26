@@ -50,7 +50,8 @@ export class LoginComponent implements OnInit {
     // debugger;
     console.log("ifo ", this.username, " ", this.password)
     //this.notShow=true;
-    this.router.navigate(['admin-page'])
+    //this.router.navigate(['admin-page'])
+    this.router.navigate(['dashboard'])
   }
 
 }

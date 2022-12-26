@@ -13,7 +13,7 @@ export class AppComponent  implements OnInit {
   notShow = true
   currenturl: string = '';
 
-  rightInfo = { currentYear: new Date().getFullYear(), company: "CompanyName"}
+  rightInfo = { currentYear: new Date().getFullYear(), company: "Deutsch-Marokkanischer Verein Für Waisenbetreuung e.V."}
   constructor(private router:Router) { }
 
   ngOnInit(): void {
