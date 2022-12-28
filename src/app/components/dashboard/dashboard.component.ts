@@ -15,6 +15,9 @@ export class DashboardComponent implements OnInit {
   public displayData: DashboardDisplayData;
   public tableData: DashboardTableData[];
 
+  public currentPageNumber: number = 1;
+  public dashboardFilterTerm: string = '';
+
   constructor(private dashboardService: DashboardService) {}
   ngOnInit(): void {
     this.dashboardService
@@ -33,10 +36,8 @@ export class DashboardComponent implements OnInit {
       .getTableData()
       .pipe(take(1))
       .subscribe({
-        next: (response) => {
-          this.tableData = response;
-
-          console.log(this.tableData);
+        next: (response: DashboardTableData[]) => {
+          this.tableData = [...response];
         },
         error: (error) => {
           console.error(error);

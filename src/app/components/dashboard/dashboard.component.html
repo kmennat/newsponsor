@@ -24,84 +24,67 @@
     </div>
   </div>
   <div class="row" *ngIf="tableData">
-    <div class="table-responsive m-3">
-      <table class="table table-info table-striped table-primary">
-        <thead style="color: black">
-          <th style="min-width: 115px">
-            {{ "dashboard-page.tableData.orphans" | translate }}
-          </th>
-          <th style="min-width: 115px">
-            {{ "dashboard-page.tableData.sponsors" | translate }}
-          </th>
-          <th style="min-width: 115px">
-            {{ "dashboard-page.tableData.families" | translate }}
-          </th>
-          <th style="min-width: 125px">
-            {{ "dashboard-page.tableData.isPaid" | translate }}
-          </th>
-          <th style="min-width: 125px">
-            {{ "dashboard-page.tableData.helpStartDate" | translate }}
-          </th>
-          <th style="min-width: 125px">
-            {{ "dashboard-page.tableData.WaisenpatenschaftFormel" | translate }}
-          </th>
-        </thead>
-        <tbody>
-          <tr *ngFor="let row of tableData">
-            <td>{{ row.orphans }}</td>
-            <td>{{ row.sponsors }}</td>
-            <td>{{ row.families }}</td>
-            <td>{{ row.isPaid }}</td>
-            <td>{{ row.helpStartDate }}</td>
-            <td>{{ row.WaisenpatenschaftFormel }}</td>
-          </tr>
-        </tbody>
-
-        <!--        <tbody>-->
-        <!--          <tr-->
-        <!--            *ngFor="-->
-        <!--              let row of tableDate-->
-        <!--                | filter: filterTermOrphan-->
-        <!--                | paginate: { itemsPerPage: 5, currentPage: p };-->
-        <!--              let i = index-->
-        <!--            "-->
-        <!--          >-->
-        <!--            <td>{{ i + 1 }}</td>-->
-        <!--            <td>{{ user.familyName }}</td>-->
-        <!--            <td>{{ user.motherName }}</td>-->
-        <!--            <td>{{ user.address }}</td>-->
-        <!--            <td>{{ user.profession }}</td>-->
-        <!--            <td>{{ user.spouseDeathDate | date }}</td>-->
-        <!--            <td>-->
-        <!--              <span>-->
-        <!--                <button class="btn btn-primary btn-xs" routerLink="/profile">-->
-        <!--                  {{ "modal-form.Details" | translate }}-->
-        <!--                </button>-->
-        <!--                <img-->
-        <!--                  class="m-1"-->
-        <!--                  width="20px"-->
-        <!--                  height="20px"-->
-        <!--                  (click)="openUpdateOrphanMoal(user)"-->
-        <!--                  data-bs-toggle="modal"-->
-        <!--                  data-bs-target="#addOrphanModal"-->
-        <!--                  src="assets/edit-icon.png"-->
-        <!--                />-->
-        <!--                <img-->
-        <!--                  width="20px"-->
-        <!--                  height="20px"-->
-        <!--                  data-bs-toggle="modal"-->
-        <!--                  data-bs-target="#deleteOrphanModal"-->
-        <!--                  src="assets/delete-icon.webp"-->
-        <!--                />-->
-        <!--                &lt;!&ndash; <button class="btn btn-xs btn-warning">{{ 'common.btn-edit' | translate }}</button>-->
-        <!--                    <button class="btn btn-xs btn-danger m-1">{{ 'common.btn-del' | translate }}</button> &ndash;&gt;-->
-        <!--              </span>-->
-        <!--            </td>-->
-        <!--          </tr>-->
-        <!--        </tbody>-->
-      </table>
-      <div class="justify-center" style="float: right">
-        <!--        <pagination-controls (pageChange)="p = $event"></pagination-controls>-->
+    <div class="col">
+      <input
+        style="width: 200px; border: 2px solid black"
+        type="text"
+        class="form-control m-3"
+        [placeholder]="'nav-bar.search.placeholder' | translate"
+        [(ngModel)]="dashboardFilterTerm"
+      />
+    </div>
+  </div>
+  <div class="row" *ngIf="tableData">
+    <div class="col">
+      <div class="table-responsive m-3">
+        <table class="table table-info table-striped table-primary">
+          <thead style="color: black">
+            <th style="min-width: 115px">
+              {{ "dashboard-page.tableData.orphans" | translate }}
+            </th>
+            <th style="min-width: 115px">
+              {{ "dashboard-page.tableData.sponsors" | translate }}
+            </th>
+            <th style="min-width: 115px">
+              {{ "dashboard-page.tableData.families" | translate }}
+            </th>
+            <th style="min-width: 125px">
+              {{ "dashboard-page.tableData.isPaid" | translate }}
+            </th>
+            <th style="min-width: 125px">
+              {{ "dashboard-page.tableData.helpStartDate" | translate }}
+            </th>
+            <th style="min-width: 125px">
+              {{
+                "dashboard-page.tableData.WaisenpatenschaftFormel" | translate
+              }}
+            </th>
+          </thead>
+          <tbody>
+            <ng-container
+              *ngFor="
+                let rowData of tableData
+                  | filter: dashboardFilterTerm
+                  | paginate
+                    : { itemsPerPage: 5, currentPage: currentPageNumber }
+              "
+            >
+              <tr>
+                <td>{{ rowData.orphans }}</td>
+                <td>{{ rowData.sponsors }}</td>
+                <td>{{ rowData.families }}</td>
+                <td>{{ rowData.isPaid }}</td>
+                <td>{{ rowData.helpStartDate }}</td>
+                <td>{{ rowData.WaisenpatenschaftFormel }}</td>
+              </tr>
+            </ng-container>
+          </tbody>
+        </table>
+        <div class="justify-center" style="float: right">
+          <pagination-controls
+            (pageChange)="currentPageNumber = $event"
+          ></pagination-controls>
+        </div>
       </div>
     </div>
   </div>
